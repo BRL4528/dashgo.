@@ -1,3 +1,23 @@
-export function NavLink() {
-  return <h1>2</h1>;
+import {
+  Link,
+  Icon,
+  Text,
+  LinkProps as ChakraLinkProps,
+} from '@chakra-ui/react';
+import { ElementType } from 'react';
+
+interface PropsNavLink extends ChakraLinkProps {
+  icon: ElementType;
+  children: string;
+}
+
+export function NavLink({ icon, children, ...rest }: PropsNavLink) {
+  return (
+    <Link display="flex" align="center" {...rest}>
+      <Icon as={icon} fontSize="20" />
+      <Text ml="4" fontWeight="medium">
+        {children}
+      </Text>
+    </Link>
+  );
 }
