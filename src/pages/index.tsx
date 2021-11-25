@@ -76,7 +76,7 @@ export default function SignIn() {
           size="lg"
           type="submit"
           mt="6"
-          colorScheme="cyan"
+          colorScheme="purple"
         >
           Entrar
         </Button>
